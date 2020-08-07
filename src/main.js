@@ -7,11 +7,16 @@ import i18n from "./i18n/index";
 import VueI18n from "vue-i18n";
 import LangENUS from './i18n/en'
 import LangZHCN from './i18n/zh'
+import VTop from './components/backToTop/ToTop.vue'
+import './icons' // icon
+
 import '@/plugins/vant'
 
 Vue.use(VueI18n, {
   i18n: (key, value) => i18n.t(key, value)
 });
+
+Vue.component('v-top', VTop);
 
 Vue.config.productionTip = false
 
