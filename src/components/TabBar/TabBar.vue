@@ -59,6 +59,12 @@ export default {
                     active: require('@/images/tabbar/category_selected.png')
                     },
                     {
+                      name: 'eat',
+                      title: 'home.eat',
+                      normal: require('@/images/tabbar/eat_default.png'),
+                      active: require('@/images/tabbar/eat_selected.png')
+                    },
+                    {
                     name: 'cart',
                     title: 'home.cart',
                     normal: require('@/images/tabbar/shoppingcart_default.png'),
@@ -92,8 +98,9 @@ export default {
             const mapType = {
                 home: 0,
                 category: 1,
-                cart: 2,
-                mine: 3
+                eat: 2,
+                cart: 3,
+                mine: 4
             }
             this.active = mapType[item]
         }

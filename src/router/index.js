@@ -4,6 +4,7 @@ import Dashboard from '@/pages/dashboard/Dashboard'
 
 const Home = () => import('@/pages/Home/index.vue')
 const Category = () => import('@/pages/Category/Category.vue')
+const Eat = () => import('@/pages/Eat/Eat.vue')
 const Cart = () => import('@/pages/Cart/Cart.vue')
 const Mine = () => import('@/pages/Mine/Mine.vue') 
 
@@ -43,6 +44,14 @@ export default new Router({
           path:'category',
           name:'category',
           component: Category,
+          meta: {
+              keepAlive: true
+          }
+        },
+        {
+          path:'eat',
+          name:'eat',
+          component: Eat,
           meta: {
               keepAlive: true
           }

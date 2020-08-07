@@ -9,8 +9,11 @@ import LangENUS from './i18n/en'
 import LangZHCN from './i18n/zh'
 import VTop from './components/backToTop/ToTop.vue'
 import './icons' // icon
-
+import { fetchGet, fetchPost } from './tool/fetch'
+import waterfall from 'vue-waterfall2'
 import '@/plugins/vant'
+
+Vue.use(waterfall)
 
 Vue.use(VueI18n, {
   i18n: (key, value) => i18n.t(key, value)
@@ -19,6 +22,9 @@ Vue.use(VueI18n, {
 Vue.component('v-top', VTop);
 
 Vue.config.productionTip = false
+
+Vue.prototype.$fetchGet = fetchGet
+Vue.prototype.$fetchPost = fetchPost
 
 /* eslint-disable no-new */
 new Vue({

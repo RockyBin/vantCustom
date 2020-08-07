@@ -8,11 +8,11 @@
             @click-left="back"
             v-if="!custom"
         />
-        <van-nav-bar :title="title" :left-text="left" left-arrow @click-left="onClickLeft" @click-right="onClickRight" v-else>
+        <van-nav-bar :title="title" :left-text="left" @click-left="onClickLeft" @click-right="onClickRight" v-else>
             <template #title v-if="customTitle">
                 <van-icon :name="iconTitle" :size="size" :color="color" />
             </template>
-            <template #left>
+            <template #left v-if="customLeft">
                 <van-icon :name="iconLeft" :size="size" :color="color" />
             </template>
             <template #right>
@@ -71,6 +71,10 @@ export default {
             default: 'apps-o',
         },
         customTitle:{
+            type:Boolean,
+            default: false,
+        },
+        customLeft:{
             type:Boolean,
             default: false,
         }

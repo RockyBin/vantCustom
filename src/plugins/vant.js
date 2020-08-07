@@ -27,3 +27,6 @@ Vue.use(Tag)
 import { SwipeCell } from 'vant'
 Vue.use(SwipeCell)
 
+import { Lazyload } from 'vant'
+// options 为可选参数，无则不传
+Vue.use(Lazyload)
