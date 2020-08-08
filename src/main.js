@@ -12,6 +12,7 @@ import './icons' // icon
 import { fetchGet, fetchPost } from './tool/fetch'
 import waterfall from 'vue-waterfall2'
 import '@/plugins/vant'
+import '@/config/filter'
 
 Vue.use(waterfall)
 

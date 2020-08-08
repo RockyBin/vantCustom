@@ -28,5 +28,10 @@ import { SwipeCell } from 'vant'
 Vue.use(SwipeCell)
 
 import { Lazyload } from 'vant'
-// options 为可选参数，无则不传
 Vue.use(Lazyload)
+
+import { List } from 'vant'
+Vue.use(List)
+
+import { PullRefresh } from 'vant'
+Vue.use(PullRefresh)

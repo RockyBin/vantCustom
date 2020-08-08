@@ -3,7 +3,7 @@ import qs from 'qs'
 
 const fetch = axios.create({
     baseURL: 'http://api.7-orange.cn:7300/mock/5def6a2d448e330a1116366e/api/',
-    timeout: 5000,
+    timeout: 10000,
     headers: {'X-Custom-Header': 'foobar'}
 })
 
