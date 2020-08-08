@@ -22,9 +22,6 @@ export default {
             this.clickMe();
         })
     },
-    mounted(){
-        //this.clickMe();
-    },
     data(){
         return {
             msg:'Msg1',
@@ -52,12 +49,12 @@ export default {
     },
     components:{
         Loading,
-        LoadingGif,
+        LoadingGif
     }
   
 }
 </script>
 
-<style lang="">
+<style lang="less" scoped>
     
 </style>

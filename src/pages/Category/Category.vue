@@ -143,7 +143,7 @@ export default {
         let el = menuLists[index]
         // 2.3 滚动到对应元素上
         this.leftScroll.scrollToElement(el, 300)
-      }, 600)
+      }, 900)
 
       // 2.4 获取右边的数据
       let param
