@@ -13,6 +13,7 @@ import { fetchGet, fetchPost } from './tool/fetch'
 import waterfall from 'vue-waterfall2'
 import '@/plugins/vant'
 import '@/config/filter'
+import store from './store/index'
 
 Vue.use(waterfall)
 
@@ -32,6 +33,7 @@ new Vue({
   el: '#app',
   i18n,
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
