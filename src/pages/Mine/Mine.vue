@@ -83,6 +83,14 @@ export default {
             //     console.log(res);
             // })
             this.getGoodsList();
+
+            let arr={
+                name:'js',
+                sex:'body'
+            }
+            let keys=Object.keys(arr);
+            let vals=Object.values(arr);
+            console.log(keys,vals); //['name','sex'] ['js', 'body]
         },
         clickMe(){
 
