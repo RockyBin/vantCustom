@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Dashboard from '@/pages/dashboard/Dashboard'
+import state from '../store/state';
 
 const Home = () => import('@/pages/Home/index.vue')
 const Category = () => import('@/pages/Category/Category.vue')
@@ -8,11 +9,12 @@ const Eat = () => import('@/pages/Eat/Eat.vue')
 const Cart = () => import('@/pages/Cart/Cart.vue')
 const Mine = () => import('@/pages/Mine/Mine.vue') 
 const GoodsDetail = () => import('@/components/goodsDetail/GoodsDetail.vue')
+const Login = ()=>import('@/pages/Login/Login.vue')
 const Test = () => import('@/pages/Test/Test.vue')
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
       {
         path: '/',
@@ -63,7 +65,8 @@ export default new Router({
           name:'cart',
           component: Cart,
           meta: {
-              keepAlive: true
+              keepAlive: true,
+              requireAuth: true,
           }
         },
         {
@@ -85,6 +88,14 @@ export default new Router({
       ]
     },
     {
+      path:'/login',
+      name:'login',
+      component: Login,
+      meta: {
+          keepAlive: true
+      }
+    },
+    {
       path:'/test',
       name:'test',
       component: Test,
@@ -94,3 +105,21 @@ export default new Router({
     },
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log(1111)
+  if(to.meta.requireAuth){
+    if(state.userInfo.token){
+      next()
+    }else{
+      next({
+        path:'/login'
+      })
+    }
+  }
+  next()
+
+})
+
+
+export default router

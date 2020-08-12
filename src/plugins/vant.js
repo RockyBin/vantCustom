@@ -30,8 +30,8 @@ Vue.use(SwipeCell)
 import { Lazyload } from 'vant'
 Vue.use(Lazyload)
 
-import { List } from 'vant'
-Vue.use(List)
+import { List, Field } from 'vant'
+Vue.use(List).use(Field)
 
 import { PullRefresh } from 'vant'
 Vue.use(PullRefresh)
