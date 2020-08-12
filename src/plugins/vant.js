@@ -35,3 +35,9 @@ Vue.use(List)
 
 import { PullRefresh } from 'vant'
 Vue.use(PullRefresh)
+
+import { Empty, Sku } from 'vant'
+Vue.use(Empty).use(Sku)
+
+import { CountDown, Divider, GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant'
+Vue.use(CountDown).use(Divider).use(GoodsAction).use(GoodsActionIcon).use(GoodsActionButton)

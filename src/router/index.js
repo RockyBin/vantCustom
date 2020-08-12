@@ -7,6 +7,8 @@ const Category = () => import('@/pages/Category/Category.vue')
 const Eat = () => import('@/pages/Eat/Eat.vue')
 const Cart = () => import('@/pages/Cart/Cart.vue')
 const Mine = () => import('@/pages/Mine/Mine.vue') 
+const GoodsDetail = () => import('@/components/goodsDetail/GoodsDetail.vue')
+const Test = () => import('@/pages/Test/Test.vue')
 
 Vue.use(Router)
 
@@ -72,7 +74,23 @@ export default new Router({
               keepAlive: true
           }
         },
+        {
+          path:'/goodsDetail',
+          name:'goodsDetail',
+          component: GoodsDetail,
+          meta: {
+              keepAlive: true
+          }
+        }
       ]
-    }
+    },
+    {
+      path:'/test',
+      name:'test',
+      component: Test,
+      meta: {
+          keepAlive: true
+      }
+    },
   ]
 })

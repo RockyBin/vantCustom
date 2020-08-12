@@ -1,8 +1,12 @@
-const state = {
-    goods:[
-        {id:1,goodsName:'iphone9',price:5000,num:1},
-        {id:2,goodsName:'iphone12',price:8000,num:2},
-    ]
+import {
+    getLanguage
+} from "@/i18n/index";
+export default {
+    // 购物车数据
+    shopCart: {},
+    // 用户信息
+    userInfo: {},
+    // 收货地址
+    shippingAddress: [],
+    language: getLanguage()
 }
-
-export default state
