@@ -107,7 +107,6 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(1111)
   if(to.meta.requireAuth){
     if(state.userInfo.token){
       next()

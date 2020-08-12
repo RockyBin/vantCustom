@@ -448,18 +448,4 @@ export default {
         }
     }
 }
-.title {
-  padding: 0.5rem;
-  font-size: 0.5rem;
-  color: grey;
-}
-.agreement {
-  // margin-top: 1.667rem;
-  line-height: 1rem;
-  color: #767676;
-  font-size: 0.867rem;
-  .agreement-box {
-    color: blue;
-  }
-}
 </style>
